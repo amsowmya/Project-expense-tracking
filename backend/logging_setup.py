@@ -1,7 +1,8 @@
 import logging
 
+log_file_path = "E:\SAM\PYTHON\Code_Basics_Tutorial\Project-expense-tracking\server.log"
 
-def setup_logger(name, log_file='server.log', level=logging.DEBUG):
+def setup_logger(name, log_file=log_file_path, level=logging.DEBUG):
     # Create a custom logger
     logger = logging.getLogger(name)
 
@@ -11,3 +12,4 @@ def setup_logger(name, log_file='server.log', level=logging.DEBUG):
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
+    return logger
