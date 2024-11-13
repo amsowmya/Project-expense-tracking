@@ -5,7 +5,7 @@ import requests
 
 API_URL = "http://localhost:8000"
 
-def analytics_tab():
+def add_update_tab():
     selected_date = st.date_input("Enter Date", datetime(2024,8,1), label_visibility="collapsed")
     response = requests.get(f"{API_URL}/expenses/{selected_date}")
     if response.status_code == 200:
